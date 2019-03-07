@@ -9,18 +9,22 @@ class TeamStats
   def get_stats
     url = "https://statsapi.web.nhl.com/api/v1/teams/#{id}/stats" 
     response = HTTParty.get(url)
-    @stats = JSON.parse(response.body, symbolize_names: true)
+    @parsed_response = JSON.parse(response.body, symbolize_names: true)
   end
 
   def games_played
-    @stats[:stats][0][:splits][0][:stat][:gamesPlayed]
+    stats[:gamesPlayed]
   end
 
   def wins
-    @stats[:stats][0][:splits][0][:stat][:wins]
+    stats[:wins]
   end
 
   def losses
-    @stats[:stats][0][:splits][0][:stat][:losses]
+    stats[:losses]
+  end
+
+  def stats
+    @parsed_response[:stats][0][:splits][0][:stat]
   end
 end
