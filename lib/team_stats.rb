@@ -24,6 +24,14 @@ class TeamStats
     stats[:losses]
   end
 
+  def ot_losses
+    stats[:ot]
+  end
+
+  def points
+    stats[:pts]
+  end
+  
   def stats
     @parsed_response[:stats][0][:splits][0][:stat]
   end
