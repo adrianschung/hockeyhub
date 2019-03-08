@@ -31,7 +31,9 @@ class TeamStats
   def points
     stats[:pts]
   end
-  
+
+  private
+
   def stats
     @parsed_response[:stats][0][:splits][0][:stat]
   end
