@@ -1,5 +1,4 @@
 class Team < ApplicationRecord
-  after_create :add_slug
 
   def to_param
     slug
@@ -26,10 +25,6 @@ class Team < ApplicationRecord
   end
 
   private
-
-  def add_slug
-    update(slug: to_slug(name))
-  end
 
   def team_stats
     Rails.cache.fetch('team_stats', expires_in: 5.minutes) do
