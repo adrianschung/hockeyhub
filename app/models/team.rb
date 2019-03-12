@@ -32,14 +32,14 @@ class Team < ApplicationRecord
   end
 
   def team_stats
-    cache.fetch('team_stats', expires_in: 5.minutes) do
-      NHLAPI::Team.get_stats(id)
+    Rails.cache.fetch('team_stats', expires_in: 5.minutes) do
+      NHLAPI::Team.new(id).get_stats
     end
   end
 
   def team_roster
-    cache.fetch('team_roster', expires_in: 5.minutes) do
-      NHLAPI::Team.get_roster(id)
+    Rails.cache.fetch('team_roster', expires_in: 5.minutes) do
+      NHLAPI::Team.new(id).get_roster
     end
   end
 end
