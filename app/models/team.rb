@@ -24,6 +24,20 @@ class Team < ApplicationRecord
     team_stats[:pts]
   end
 
+  def division_rank
+    team_standings[:divisionRank]
+  end
+
+  def conference_rank
+    team_standings[:conferenceRank]
+  end
+
+  def league_rank
+    team_standings[:leagueRank]
+  end
+
+  def 
+
   private
 
   def team_stats
@@ -35,6 +49,12 @@ class Team < ApplicationRecord
   def team_roster
     Rails.cache.fetch('team_roster', expires_in: 5.minutes) do
       NHLAPI::Team.new(id).get_roster
+    end
+  end
+
+  def team_standings
+    Rails.cache.fetch('team_standings', expires_in: 5.minutes) do
+      NHLAPI::Team.new(id).get_standings
     end
   end
 end
