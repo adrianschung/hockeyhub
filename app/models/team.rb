@@ -36,8 +36,6 @@ class Team < ApplicationRecord
     team_standings[:leagueRank]
   end
 
-  def 
-
   private
 
   def team_stats
