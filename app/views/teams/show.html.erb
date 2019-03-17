@@ -1,8 +1,13 @@
-<h2>Welcome to <%= current_team.name %> hub</h2>
-Wins: <%= current_team.wins %>
-Losses: <%= current_team.losses %>
-Overtime Losses: <%= current_team.ot_losses %>
-Points: <%= current_team.losses %>
-Division Rank: <%= current_team.division_rank %>
-Conference Rank: <%= current_team.conference_rank %>
-League Rank: <%= current_team.league_rank %>
+<div class="container">
+  <h2>Welcome to <%= current_team.name %> hub</h2>
+  <br />
+  <p>
+    Wins: <%= current_team.wins %><br />
+    Losses: <%= current_team.losses %><br />
+    Overtime Losses: <%= current_team.ot_losses %><br />
+    Points: <%= current_team.losses %><br />
+    Division Rank: <%= current_team.division_rank %><br />
+    Conference Rank: <%= current_team.conference_rank %><br />
+    League Rank: <%= current_team.league_rank %>
+  </p>
+</div>

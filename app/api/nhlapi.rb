@@ -23,7 +23,7 @@ module NHLAPI
     def get_standings
       url = "https://statsapi.web.nhl.com/api/v1/standings"
       @parsed_response = get_response(url)
-      @parse_response[:records][1][:teamRecords].select {|team| team[:team][:id] == 10}
+      @parsed_response[:records][1][:teamRecords].select {|team| team[:team][:id] == 10}[0]
     end
 
     private
