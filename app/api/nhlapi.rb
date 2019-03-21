@@ -17,7 +17,7 @@ module NHLAPI
     def get_roster
       url = "https://statsapi.web.nhl.com/api/v1/teams/#{@id}/roster" 
       @parsed_response = get_response(url)
-      @parsed_response[:roster][0]
+      @parsed_response[:roster]
     end
 
     def get_standings
