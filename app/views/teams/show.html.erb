@@ -4,30 +4,20 @@
   <table id="stats">
     <tr>
       <th>Wins</th>
-      <td><%= current_team.wins %></td>
-    </tr>
-    <tr>
       <th>Losses</th>
-      <td><%= current_team.losses %></td>
-    </tr>
-    <tr>
       <th>Overtime Losses</th>
-      <td><%= current_team.ot_losses %></td>
-    </tr>
-    <tr>
       <th>Points</th>
-      <td><%= current_team.points %></td>
-    </tr>
-    <tr>
       <th>Division Rank</th>
-      <td><%= current_team.division_rank %></td>
-    </tr>
-    <tr>
       <th>Conference Rank</th>
-      <td><%= current_team.conference_rank %></td>
+      <th>League Rank</th>
     </tr>
     <tr>
-      <th>League Rank</th>
+      <td><%= current_team.wins %></td>
+      <td><%= current_team.losses %></td>
+      <td><%= current_team.ot_losses %></td>
+      <td><%= current_team.points %></td>
+      <td><%= current_team.division_rank %></td>
+      <td><%= current_team.conference_rank %></td>
       <td><%= current_team.league_rank %></td>
     </tr>
   </table>
