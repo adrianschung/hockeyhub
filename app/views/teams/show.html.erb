@@ -33,10 +33,10 @@
   </table>
   <h3>Roster</h3>
   <table class="player-table">
-  <% team_roster.each do |player| %>
+  <% current_team.team_roster.each do |player| %>
     <tr>
       <th>Player</th>
-      <th><%= player.player_name %></th>
+      <th><%= player_name(player) %></th>
     </tr>
   <% end %>
 </div>

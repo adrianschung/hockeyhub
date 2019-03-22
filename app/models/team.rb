@@ -36,17 +36,17 @@ class Team < ApplicationRecord
     team_standings[:leagueRank]
   end
 
+  def team_roster
+    Rails.cache.fetch('team_roster', expires_in: 5.minutes) do
+      NHLAPI::Team.new(id).get_roster
+    end
+  end
+
   private
 
   def team_stats
     Rails.cache.fetch('team_stats', expires_in: 5.minutes) do
       NHLAPI::Team.new(id).get_stats
-    end
-  end
-
-  def team_roster
-    Rails.cache.fetch('team_roster', expires_in: 5.minutes) do
-      NHLAPI::Team.new(id).get_roster
     end
   end
 
