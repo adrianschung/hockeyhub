@@ -1,42 +1,47 @@
 <div class="container">
   <h2>Welcome to <%= current_team.name %> hub</h2>
   <br />
-  <table class="stats-table">
+  <table id="stats">
     <tr>
       <th>Wins</th>
-      <th><%= current_team.wins %></th>
+      <td><%= current_team.wins %></td>
     </tr>
     <tr>
       <th>Losses</th>
-      <th><%= current_team.losses %></th>
+      <td><%= current_team.losses %></td>
     </tr>
     <tr>
       <th>Overtime Losses</th>
-      <th><%= current_team.ot_losses %></th>
+      <td><%= current_team.ot_losses %></td>
     </tr>
     <tr>
       <th>Points</th>
-      <th><%= current_team.points %></th>
+      <td><%= current_team.points %></td>
     </tr>
     <tr>
       <th>Division Rank</th>
-      <th><%= current_team.division_rank %></th>
+      <td><%= current_team.division_rank %></td>
     </tr>
     <tr>
       <th>Conference Rank</th>
-      <th><%= current_team.conference_rank %></th>
+      <td><%= current_team.conference_rank %></td>
     </tr>
     <tr>
       <th>League Rank</th>
-      <th><%= current_team.league_rank %></th>
+      <td><%= current_team.league_rank %></td>
     </tr>
   </table>
+  <br />
   <h3>Roster</h3>
-  <table class="player-table">
-  <% current_team.team_roster.each do |player| %>
+  <br />
+  <table id="players">
     <tr>
-      <th>Player</th>
-      <th><%= player_name(player) %></th>
+     <th>Player</th>
     </tr>
-  <% end %>
+    <% current_team.team_roster.each do |player| %>
+      <tr>
+        <td><%= player_name(player) %></td>
+      </tr>
+    <% end %>
+  </table>
 </div>
