@@ -1,4 +1,5 @@
 class Team < ApplicationRecord
+  default_scope { order('name') }
 
   def to_param
     slug
