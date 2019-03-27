@@ -25,3 +25,8 @@ Team.create(name: 'Nashville Predators', team_id: 18, division: 2, slug: 'predat
 Team.create(name: 'St. Louis Blues', team_id: 19, division: 2, slug: 'blues')
 Team.create(name: 'Calgary Flames', team_id: 20, division: 3, slug: 'flames')
 Team.create(name: 'Colorado Avalanche', team_id: 21, division: 2, slug: 'avalanche')
+Team.create(name: 'Edmonton Oilers', team_id: 22, division: 3, slug: 'oilers')
+Team.create(name: 'Vancouver Canucks', team_id: 23, division: 3, slug: 'canucks')
+Team.create(name: 'Anaheim Ducks', team_id: 24, division: 3, slug: 'ducks')
+Team.create(name: 'Dallas Stars', team_id: 25, division: 2, slug: 'stars')
+Team.create(name: 'Los Angeles Kings', team_id: 21, division: 2, slug: 'kings')
