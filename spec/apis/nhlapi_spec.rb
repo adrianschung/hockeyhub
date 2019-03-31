@@ -17,4 +17,12 @@ describe NHLAPI do
       expect(request[:pts]).to be_an(Integer)
     end
   end
+
+  context 'when getting roster of a team' do
+
+    it 'retrieves a valid team' do
+      request = NHLAPI::Team.new(1).get_roster
+      expect(request).not_to be_empty
+    end
+  end
 end
