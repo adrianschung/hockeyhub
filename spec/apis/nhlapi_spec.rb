@@ -16,9 +16,5 @@ describe NHLAPI do
       expect(request[:ot]).to be_an(Integer)
       expect(request[:pts]).to be_an(Integer)
     end
-
-    it 'gives an error message of invalid team' do
-      request = NHLAPI::Team.new(9999).get_stats
-      expect(request[:message]).to eq("Invalid Request with value: stats")
   end
 end
