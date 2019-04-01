@@ -21,8 +21,17 @@ html {
   height: 5%;
 }
 
-.index-box {
+.index-wrapper {
   height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 40%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
