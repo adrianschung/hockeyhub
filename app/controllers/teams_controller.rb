@@ -1,5 +1,6 @@
 class TeamsController < ApplicationController
   def show
+    raise ActionController::RoutingError.new('Not Found') if current_team.blank?
   end
 
   private
