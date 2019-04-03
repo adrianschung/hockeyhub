@@ -6,4 +6,8 @@ module TeamsHelper
   def number(player)
     player[:jerseyNumber]
   end
+
+  def position(player)
+    player[:position][:abbreviation]
+  end
 end
