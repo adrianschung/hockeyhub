@@ -27,10 +27,12 @@
   <table id="players">
     <tr>
      <th>Player</th>
+     <th>#</th>
     </tr>
     <% current_team.team_roster.each do |player| %>
       <tr>
         <td><%= player_name(player) %></td>
+        <td><%= number(player) %></td>
       </tr>
     <% end %>
   </table>
